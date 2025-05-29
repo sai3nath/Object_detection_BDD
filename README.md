@@ -26,7 +26,7 @@ path to images are updated in the bdd_data.yaml accordingly , make sure you are 
 path to labels, which are in json format are needs to updated in configs/config.yaml. 
 
 ### 2. update paths to train and val in bdd_data.yaml 
-example: train: /absolute/path/to/your/train
+example: train: /absolute/path/to/your/train 
 
 ### 3. update JSON paths for bdd_labels_train_json and bdd_labels_val_json in configs/config.yaml file. 
 example: data_bdd/bdd100k/labels_original/bdd100k_labels_images_train.json
