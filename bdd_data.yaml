@@ -1,0 +1,27 @@
+
+# Path to training images directory - REQUIRED
+# Update this absolute path to your actual training images location
+train: /Users/path/Documents/saiTrinath/assignment_data_bdd/bdd100k_images_100k/bdd100k/images/100k/train
+
+# Path to validation images directory - REQUIRED
+# Update this to absolute path to your actual validation images location
+val: /Users/path/Documents/saiTrinath/assignment_data_bdd/bdd100k_images_100k/bdd100k/images/100k/val
+
+# Optional: Path to training images directory (if you converted train labels too)
+# train: /path/to/your/bdd_100k/Images/train
+
+# Number of classes (should be 10 for this task)
+nc: 10
+
+# Class names - MUST match the order and names from CLASS_MAP used in conversion
+names:
+  0: traffic light
+  1: traffic sign
+  2: car
+  3: person
+  4: bus
+  5: truck
+  6: rider
+  7: bike
+  8: motor
+  9: train

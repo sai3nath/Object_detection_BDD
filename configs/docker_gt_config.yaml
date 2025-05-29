@@ -1,0 +1,19 @@
+project_paths:
+  bdd_labels_train_json: "/data_mount/labels/bdd100k_labels_images_train.json"
+  bdd_labels_val_json: "/data_mount/labels/bdd100k_labels_images_val.json"
+  
+  main_output_dir: "/output_mount/gt_analysis_run"
+
+  train_images_df_path: "/output_mount/gt_analysis_run/intermediate_data/gt/gt_parsed_data/bdd_train_images.parquet"
+  train_objects_df_path: "/output_mount/gt_analysis_run/intermediate_data/gt/gt_parsed_data/bdd_train_objects.parquet"
+  val_images_df_path: "/output_mount/gt_analysis_run/intermediate_data/gt/gt_parsed_data/bdd_val_images.parquet"
+  val_objects_df_path: "/output_mount/gt_analysis_run/intermediate_data/gt/gt_parsed_data/bdd_val_objects.parquet"
+  
+
+run_modules:
+  ground_truth_analysis: true
+
+
+gt_analysis_config:
+  intermediate_data_subdir: "intermediate_data/gt" # For parquet files from parser and analyzer
+  output_plots_subdir: "plots/gt"              # For plots from GT visualizer

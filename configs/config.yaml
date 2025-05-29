@@ -1,0 +1,25 @@
+project_paths:
+  bdd_labels_train_json: "path/to/your/labels/bdd100k_labels_images_train.json" #path to your labels train json
+  bdd_labels_val_json: "path/to/your/labels/bdd100k_labels_images_val.json" #path to your labels val json
+  
+  # Change below paths only if needed. 
+  main_output_dir: "analysis_run_outputs"
+  train_objects_df_path: "analysis_run_outputs/intermediate_data/gt/gt_parsed_data/bdd_train_objects.parquet"
+  val_objects_df_path: "analysis_run_outputs/intermediate_data/gt/gt_parsed_data/bdd_val_objects.parquet"
+  train_images_df_path: "analysis_run_outputs/intermediate_data/gt/gt_parsed_data/bdd_train_images.parquet"
+  val_images_df_path: "analysis_run_outputs/intermediate_data/gt/gt_parsed_data/bdd_val_images.parquet"
+  model_preds_labels_txt_path: "predictions/predict_yolov8n_img640_conf0.25/"
+
+
+run_modules:
+  ground_truth_analysis: true
+  evaluation_analysis: true # make sure ground_truth ran, if you only want to run evaluation_analysis. else, set ground_truth_analysis: true
+  qualitative_analysis: false
+
+gt_analysis_config:
+  intermediate_data_subdir: "intermediate_data/gt" # Subdir within main_output_dir
+  output_plots_subdir: "plots/gt"              # Subdir within main_output_dir
+
+eval_analysis_config:
+  intermediate_data_subdir: "intermediate_data/eval" # Subdir within main_output_dir
+  output_plots_subdir: "plots/eval"              # Subdir within main_output_dir
